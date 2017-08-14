@@ -3,6 +3,6 @@ awk -v prefix="STRING" '{print prefix $0}' INFILE > OUTFILE
 
 
 ## Insert STRING at the begininng of FILE
-echo 'STRING' | cat - FILE > tmp && mv FILE
+echo 'STRING' | cat - FILE > tmp && mv tmp FILE
   # STRING should not contain '\t' or '\n' inside. It will be just pasted as it is. 
   # If you need to insert '\t', simply include "x'tab'y" 
